@@ -1,0 +1,70 @@
+# ---------- EACH DE ARRAY ---------- #
+
+array_nomes = ['Dona', 'Noguinha', 'tem', 'um', 'rabão']
+
+# Percorre o array e exibe cada elemento contido dentro dele.
+array_nomes.each do |nome|
+  puts nome
+end
+
+# ----------     //     ---------- #
+
+
+# ---------- EACH DE HASH ---------- #
+
+hash_nomes = {'valor 1' => 'foda-se', 'valor 2' => 'vai à merda'}
+
+# Percorre o hash e exibe cada elemento contido dentro dele.
+hash_nomes.each do |chave, valor|
+  puts "#{chave} = #{valor}"
+end
+
+# ----------     //     ---------- #
+
+
+# ---------- MAP ---------- #
+
+# Map: mapeia o array original.
+array_numeros = [1, 2, 3, 4]
+
+# Um novo array irá receber o array original vezes dois.
+# OBS: map não modifica o array original.
+novo_array_numeros = array_numeros.map do |iterador|
+  iterador * 2
+end
+
+# Atualiza o array original, multiplicando por dois.
+# OBS: este map! altera o array, é uma espécie de generalização, como em Julia.
+array_numeros.map! do |iterador|
+  iterador * 2
+end
+
+# ---------- // ---------- #
+
+
+# ---------- SELECT EM ARRAY ---------- #
+
+# Select: serve para selecionar elementos dentro do array.
+
+array_numerico = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# Apenas serão selecionados os números maiores que quatro.
+selecionados = array_numerico.select do |verificador|
+  verificador >= 4
+end
+
+# ----------       //       ---------- #
+
+
+# ---------- SELECT EM HASH ---------- #
+
+# Select: serve para selecionar elementos dentro do array.
+
+hash_numerico = {1 => 'um', 2 => 'dois', 3 => "três"}
+
+# Apenas serão selecionados os números maiores que quatro.
+selecionados_a_partir_da_chave = hash_numerico.select do |chave, valor|
+  chave > 2
+end
+
+# ----------       //       ---------- #

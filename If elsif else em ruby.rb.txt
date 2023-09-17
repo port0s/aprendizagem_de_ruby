@@ -1,0 +1,14 @@
+# ---------- IF ELSIF ELSE ---------- #
+
+# Similar ao de Julia.
+
+if 2 == 2
+  p '2 é igual a 2'
+
+elsif 2 != 2
+  p '2 é diferente de 2'
+
+else
+  p 'Essa porra é bizarra'
+
+end

@@ -1,0 +1,51 @@
+# ---------- ARRAY ---------- #
+
+vetor = []                        # Declração de array.
+
+vetor.push('Mundo')               # Coloca elementos no array.
+
+vetor.insert(0, 'Olá', ',', ' ')  # Coloca elementos no array, por posição.
+
+vetor[3]                          # Retorna: Mundo.
+
+vetor[1..3]                       # Retorna: todo intervalo.
+
+vetor[-1]                         # Retorna: Mundo.
+
+vetor.first                       # Retorna: o primeiro do array
+
+vetor.last                        # Retorna: o último do array
+
+vetor.count                       # Retorna: tamanho do array.
+
+vetor.empty?                      # Retorna: true = vazio; false = alguma coisa.
+
+vetor.include?(' ')               # Retorna: tá no array? true = tá; false = não tá.
+
+vetor.delete_at(2)                # Retorna: elemento na posição (...) deletado.
+
+vetor.pop                         # Retorna: último elemento apagado.
+
+vetor.shift                       # Retorna: apaga o primeiro elemento.
+# ----------     //   	---------- #
+
+
+# ---------- HASH ---------- #
+
+hash = Hash.new	                        # Declaração de hash vazio.
+hash.class 	                            # Método que verifica qual o tipo da variável.
+
+hash = {cu: 'boga', pinto: 'boguinha'}  # Preenchimento de hash vazio.
+
+hash[:buceta] = "xota"                  # Novo valor no hash.
+
+hash.values                             # Retorna: valores no hash, uma lista.
+
+hash[:cu]                               # Retorna: a chave do valor buscado.
+
+hash.delete(:cu)                        # Retorna: deleta a chabe e o valor de cu.
+
+hash.size                               # Retorna: quantidade de elementos no hash.
+
+hash.empty?                             # Retorna: true = vazio; false = alguma coisa.
+# ----------   //   ---------- #

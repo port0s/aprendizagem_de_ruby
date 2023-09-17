@@ -1,0 +1,10 @@
+# ---------- OPERAÇÕES ---------- #
+
+10 + 2	# Adição.
+10 - 2	# Subtração.
+10 * 2	# Multiplicação.
+10 / 2	# Divisão.
+10 % 2	# Módulo (resto da divisão).
+10 ** 2	# Exponenciação (elevação de número).
+
+resultado = 10 + 2 / 2 * 10	 # Armazenamento em variável: resultado igual a 20.

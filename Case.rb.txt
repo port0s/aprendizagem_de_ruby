@@ -1,0 +1,45 @@
+# ---------- CASE ---------- #
+
+# Case: similar ao switch case da linguagem C e algumas de suas derivadas.
+
+print "Qual o número do seu mês nascimento? "
+mes = gets.chomp.to_i
+
+case mes
+
+# Verifica em um intervalo.
+when 13..20
+  p "Não seja burro"
+
+else
+  p "Cara, como você é burro."
+
+end
+
+
+case mes
+when 1
+  p "Janeiro"
+when 2
+  p "Fevereiro"
+when 3
+  p "Março"
+when 4
+  p "Abril"
+when 5
+  p "Maio"
+when 6
+  p "Junho"
+when 7
+  p "Julho"
+when 8
+  p "Agosto"
+when 9
+  p "Setembro"
+when 10
+  p "Outubro"
+when 11
+  p "Novembro"
+when 12
+  p "Dezembro"
+end

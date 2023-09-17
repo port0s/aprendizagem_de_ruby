@@ -1,0 +1,141 @@
+# OBS: Não existem tipos primitivos, todos são Classes.
+
+# ---------- INTEGER ---------- #
+
+variavel_int = 10  	# Declaração de tipo
+variavel_int.class 	# Método que verifica qual o tipo da variável.
+
+# ----------   //   ---------- #
+
+
+# ---------- FLOAT ---------- #
+
+variavel_float = 10.1 	# Declração de tipo
+variavel_float.class 	# Método que verifica qual o tipo da variável.
+
+# ----------   //  ---------- #
+
+
+# ---------- BOOLEAN ---------- #
+
+variavel_boolTrue = True 	# Declração de tipo
+variavel_boolTrue.class 	# Método que verifica qual o tipo da variável.
+
+variavel_boolFalse = False 	# Declração de tipo
+variavel_boolFalse.class 	# Método que verifica qual o tipo da variável.
+
+# ----------   //   ---------- #
+
+
+# ---------- STRINGS ---------- #
+
+# Maneiras diferentes de se declarar uma string.
+
+variavel_string = "Olá, mundo... vaisifudê!"  	# Declração de tipo
+variavel_string.class 						  	# Método que verifica qual o tipo da variável.
+
+variavel_string = %Q{Olá, mundo... vaisifudê!}  # Declração de tipo
+variavel_string.class 						  	# Método que verifica qual o tipo da variável.
+
+variavel_string = %{Olá, mundo... vaisifudê!}  	# Declração de tipo
+variavel_string.class 						   	# Método que verifica qual o tipo da variável.
+
+variavel_string = %/Olá, mundo... vaisifudê!/  	# Declração de tipo
+variavel_string.class 						   	# Método que verifica qual o tipo da variável.
+
+variavel_string = <<blocodestring
+						Olá, mundo!				# Declração de tipo: não necessárias aspas duplas, nem no print.
+					blocodestring
+variavel_string.class 						 	# Método que verifica qual o tipo da variável.
+
+# ----------   //    ---------- #
+
+
+# ---------- ARRAY ---------- #
+
+variavel_array = ['Olá,', 'mundo', 'vaisifudê!']  # Declração de tipo
+variavel_array.class 	# Método que verifica qual o tipo da variável.
+
+variavel_array_de_tipos_diversos = [1, 'Olá', True, 2] # Declaração de tipos
+variavel_array_de_tipos_diversos.class			   	   # Método que verifica qual o tipo da variável.
+
+variavel_array[0] 	# Ruby é indexada a partir do zero: pegue o primeiro item da lista.
+variavel_array[69] 	# Caso não tenha item na posição buscada: retorna nil.
+
+# ----------  //   ---------- #
+
+
+# ---------- ARRAY (SIMBOL) ---------- #
+
+# Similares às tuplas de Python: imutáveis.
+# São como Strings em Ruby, porém, ocupam um mesmo espaço de memória.
+
+primeira_variavel_simbol = :tipo_simbol  # Declração de tipo
+segunda_variavel_simbol = :tipo_simbol   # Declração de tipo
+
+primeira_variavel_simbol.class 					 # Método que verifica qual o tipo da variável.
+segunda_variavel_simbol.class 					 # Método que verifica qual o tipo da variável.
+
+# Ambas as variáveis estão na mesma posição da memória.
+primeira_variavel_simbol.object_id				 # Para saber qual a posição na memória deste tipo.
+segunda_variavel_simbol.object_id				 # Para saber qual a posição na memória deste tipo.
+
+# ----------     //   	---------- #
+
+
+# ---------- HASH ---------- #
+
+# Similares aos dicionários de Python: par chave-valor (key-value).
+
+variavel_hash = {primeiro: 'Olá,', segundo: 'mundo', terceiro: 'vaisifudê!'}  # Declração de tipo
+variavel_hash.class 	# Método que verifica qual o tipo da variável.
+
+variavel_hash = {primeiro => 'Olá,', segundo => 'mundo', terceiro => 'vaisifudê!'}  # Declração de tipo: com =>
+variavel_hash.class 	# Método que verifica qual o tipo da variável.
+
+variavel_hash[:segundo]	# Chamada pela key e retorno do value.
+
+variavel_hash = Hash.new	# Declaração de hash vazio.
+variavel_hash.class 	# Método que verifica qual o tipo da variável.
+
+# ----------   //   ---------- #
+
+
+# ---------- VARIÁVEIS EM ESCOPO DE ORIENTAÇÃO A OBJETO --------- #
+
+# Uma variável local é declarada normalmente.
+# Uma variável de instância é declarada com um "@" no nome.
+# Uma variável de classe é declarada com "@@", e uma variável global é declarada com "$".
+# Variáveis que iniciam com uma letra maiúscula são consideradas constantes.
+
+
+class A
+  @@contexto = "classe"
+
+  def initialize
+    @contexto = "instância"
+  end
+
+  def contexto
+    @contexto
+  end
+
+  def A.contexto
+    @@contexto
+  end
+end
+
+a = A.new
+a.contexto  # >> "instância"
+A.contexto  # >> "classe"
+
+# ---------- 			         //			 			--------- #
+
+
+
+# OBS: Tipagem é dinâmica: adicionou novo tipo, muda o original.
+variavel_int = 10									# Variável do tipo inteiro.
+variavel_int.class									# Retorna tipo int.
+
+variavel_int = 'Esta variável agora é um string'	# Variável passa a ser do tipo string.
+variavel_int.class									# Retorna tipo string.

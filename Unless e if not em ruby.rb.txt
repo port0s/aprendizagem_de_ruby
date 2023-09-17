@@ -1,0 +1,24 @@
+# ---------- UNLESS E IF NOT ---------- #
+
+
+# Unless (a não ser que): só entra na primeira condição, se o falso for reconhecido.
+# Então, 2 não é diferente a 2, logo, a afirmação abaixo é falsa, entra no unless.
+unless 2 != 2
+  p '2 não é diferente de 2'
+
+else
+  p 'Essa porra é bizarra'
+
+end
+
+
+if not 2 == 2
+  p '2 é igual a 2'
+
+elsif 2 != 2
+  p '2 é diferente de 2'
+
+else
+  p 'Essa porra é bizarra'
+
+end

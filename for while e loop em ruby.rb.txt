@@ -1,0 +1,58 @@
+# ---------- FOR ---------- #
+
+# For: similar ao for de Julia e também lembra o de Python.
+
+array_de_teste = ['Olá', 12, true, "\n", '\n']
+
+for elementos in array_de_teste
+  p elementos
+  p elementos.class
+end
+# ---------- // ----------#
+
+
+# ---------- WHILE ---------- #
+
+# While: similar ao de Julia.
+
+variavel_de_controle = 0
+
+while variavel_de_controle < 10
+
+  puts "while: #{variavel_de_controle} #{variavel_de_controle.class}"
+
+
+  variavel_de_controle = variavel_de_controle + 1
+
+end
+
+# ----------  //  ---------- #
+
+
+# ---------- LOOP (DO WHILE) ---------- #
+
+# Início do loop (do while)
+loop do
+
+  # Exibe a variável que já foi estabelecida no while anterior
+  p "loop: #{variavel_de_controle} #{variavel_de_controle.class}"
+
+  # Lembra Perl: pare se a variavel_de_controle for igual a 20.
+  break if variavel_de_controle == 20
+
+  # Adicione mais um à variavel_de_controle.
+  variavel_de_controle += 1
+
+# Encerre o loop.
+end
+
+# ----------       //        ---------- #
+
+
+# ---------- TIMES ---------- #
+
+10.times do
+  p "Este bloco de código será exibido 10 vezes!"
+end
+
+# ----------  //  ---------- #

@@ -1,0 +1,28 @@
+# ---------- ENTRADA E SAÍDA DE DADOS ---------- #
+
+print 'Olá, mundo!'			# Não pula linha.
+puts 'Olá, mundo!'			# Pula linha.
+p 'Olá, mundo!'					# Pula linha.
+p string, string				# pula linha.
+
+
+print 'Qual seu nome? '		# Exibe na tela a mensagem que pergunta o nome.
+
+nome = gets.chomp			# Variável nome irá receber: o digitado (gets) sem o pula linha '\n' (chomp).
+
+puts "Olá, #{nome}!" # puts irá exibir: olá e o nome da pessoa através de uma interpolação ("#{nome}")
+
+
+print 'Qual sua idade? '	# Exibe na tela a mensagem que pede a idade.
+
+idade = gets.chomp.to_i		# Variável idade irá receber: o digitado (gets) sem o pula linha '\n' (chomp),
+							# álém de converter para o tipo int (to_i).
+
+# Exibição das duas informações armazenadas.
+puts "Olá, #{nome}. Parece que tem #{idade} anos, já passou da hora de ir, não achar, #{nome}?"
+
+# ----------		   //	  		  ---------- #
+
+
+# ---------- ENTRADA DE DADOS ---------- #
+# ----------		//		  ---------- #
